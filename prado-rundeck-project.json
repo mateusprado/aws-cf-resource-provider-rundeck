@@ -1,0 +1,62 @@
+{
+    "typeName": "Prado::Rundeck::Project",
+    "description": "Rundeck Project Resource",
+    "sourceUrl": "https://github.com/mateusprado/aws-cf-resource-provider-rundeck.git",
+    "properties": {
+        "RundeckAuthToken": {
+            "description": "The Rundeck API Auth Token. See more https://docs.rundeck.com/docs/api/rundeck-api.html#authentication",
+            "type": "string"
+        },
+        "RundeckAPIURL": {
+            "description": "The URL from Rundeck API. https://docs.rundeck.com/docs/api/rundeck-api.html#urls",
+            "type": "string"
+        },
+        "Name": {
+            "description": "Required for all TPS Reports submitted after 2/19/1999",
+            "type": "string"
+        },
+        "ProjectID": {
+            "description": "Required for all TPS Reports submitted after 2/19/1999",
+            "type": "string"
+        }
+    },
+    "additionalProperties": false,
+    "required": [
+        "RundeckAuthToken",
+        "RundeckApiURL",
+        "Name"
+    ],
+    "readOnlyProperties": [
+        "/properties/ProjectId"
+    ],
+    "primaryIdentifier": [
+        "/properties/ProjectId"
+    ],
+    "handlers": {
+        "create": {
+            "permissions": [
+                ""
+            ]
+        },
+        "read": {
+            "permissions": [
+                ""
+            ]
+        },
+        "update": {
+            "permissions": [
+                ""
+            ]
+        },
+        "delete": {
+            "permissions": [
+                ""
+            ]
+        },
+        "list": {
+            "permissions": [
+                ""
+            ]
+        }
+    }
+}
